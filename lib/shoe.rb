@@ -7,8 +7,7 @@ class Shoe
 
   def initialize(brand)
     @brand = brand
-    BRANDS << brand
-    BRANDS.uniq!
+    BRANDS << brand unless BRANDS.any?{|e| e == brand}
     
   end
   
